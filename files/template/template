@@ -1,0 +1,46 @@
+# created by fftool
+
+units real
+boundary p p p
+
+atom_style full
+bond_style harmonic
+angle_style harmonic
+dihedral_style opls
+improper_style  cvff
+
+special_bonds lj/coul 0.0 0.0 0.5
+
+pair_style hybrid lj/cut/coul/long 12.0 12.0
+pair_modify mix geometric 
+kspace_style pppm 1.0e-5
+
+read_data data.lmp
+# read_restart restart1.lmp
+
+pair_coeff_placeholder
+
+minimize 1.0e-4 1.0e-6 100 1000
+# reset_timestep 0
+
+SHAKE_placeholder
+
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+
+velocity all create 298 298 dist gaussian
+
+thermo_style custom step cpu etotal ke pe evdwl ecoul elong temp press vol density
+thermo 1000
+
+timestep 1.0
+fix 8 all npt temp 298 298 200 iso 1 1 1000 tchain 3 pchain 3 mtk yes
+fix kick all       efield 0.0 0.0 Fieldstrength
+restart         10000 template.restart1 template.restart2
+dump TRAJ all     custom 10000 traj-template.lmp element xu yu zu
+dump_modi_placeholder
+dump_modify TRAJ  sort id
+run             10000000
+undump TRAJ
+unfix 8
+
