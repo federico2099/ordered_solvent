@@ -1,0 +1,74 @@
+! TRAVIS input file
+! Created with TRAVIS version compiled at Aug 17 2018 11:39:23
+! Input file written at Tue Apr 20 17:01:47 2021.
+! I have acknowledged this note (y/n). [yes] 
+yes
+! Use the advanced mode until the analysis selection menu (y/n)? [no] 
+no
+! Use these values (y) or enter different values (n)? [yes] 
+yes
+! Update cell geometry in every time step (i.e., NPT ensemble) (y) or use fixed cell (n)? [yes] 
+yes
+! Create images of the structural formulas (y/n)? [no] 
+no
+! Accept these molecules (y) or change something (n)? [yes] 
+yes
+! Which functions to compute (comma separated)?
+cut
+! Use the advanced mode for the main part (y/n)? [no] 
+no
+! Which of the molecules should be the reference molecule (F6P=1, C8H15N2=2)? 
+2
+! Show reference molecule itself (y/n)? [yes] 
+yes
+! Center reference molecule in the box (y/n)? [yes] 
+yes
+! Fix rotational freedom of the reference molecule (y/n)? [no] 
+no
+! How many clusters to create? [100] 
+100
+! How many time steps to use for cluster creation? [6253] 
+6253
+! Use neighboring F6P molecules (y/n)? [yes] 
+no
+! Use neighboring C8H15N2 molecules (y/n)? [yes] 
+yes
+! Do you want to define a distance condition (y/n)? [yes] 
+yes
+! Which atom(s) to take from RM C8H15N2 (e.g. "C1,C3-5,H", "*"=all)? [#2]
+C6
+! Which atom(s) to take from OM C8H15N2 (e.g. "C1,C3-5,H", "*"=all)? [#2]
+N1
+! Enter another set of atoms for this condition (y/n)? [no] 
+no
+! Enter min./max. distance (0) or min./max. nearest neighbor count (1)? [0] 
+1
+! Use next neighbors from the n-th on? [1] 
+1
+! Use next neighbors up to the n-th? [1] 
+100
+! Invalid input. Enter an integer number between 1 and 43.
+! Use next neighbors up to the n-th? [1] 
+43
+! Do you want to define an angular condition (y/n)? [no] 
+no
+! Add another condition to this set of conditions (y/n)? [no] 
+no
+! Enter an additional set of conditions (y/n)? [no] 
+no
+! Invert this condition (only add bin entries if failed) (y/n)? [no] 
+no
+! Write also virtual atoms (center of mass, ...) (y/n)? [no] 
+no
+! Write detailed (long) comment lines into output xyz file (y/n)? [yes] 
+yes
+! Sort molecules according to distance from reference molecule (y/n)? [yes] 
+yes
+! Put the center of the system to (0|0|0) (y) or to (x/2|y/2|z/2) (n)? [yes] 
+yes
+! In which time step to start processing the trajectory? [1] 
+1
+! How many time steps to use (from this position on)? [all] 
+800000
+! Use every n-th time step from the trajectory? [1] 
+1

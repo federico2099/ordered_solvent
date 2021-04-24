@@ -1,0 +1,422 @@
+Command line:
+"travis -p traj-BMIM-PF6-E2-NVT.lmp -i input.txt"
+
+
+   ________                                 __
+  /        |                               /  |
+  ########/ ______    ______    __     __  ##/    _______
+     ## |  /      \  /      \  /  \   /  | /  |  /       |
+     ## | /######  | ######  | ##  \ /##/  ## | /#######/
+     ## | ## |  ##/  /    ## |  ##  /##/   ## | ##      \
+     ## | ## |      /####### |   ## ##/    ## |  ######  |
+     ## | ## |      ##    ## |    ###/     ## | /     ##/
+     ##/  ##/        #######/      #/      ##/  #######/
+
+     TRajectory Analyzer and VISualizer  -  Open-source freeware under GNU GPL v3
+
+     Copyright (c) Martin Brehm      (2009-2018), University of Halle (Saale)
+                   Martin Thomas     (2012-2018)
+                   Barbara Kirchner  (2009-2018), University of Bonn
+
+     http://www.travis-analyzer.de
+
+     Please cite: M. Brehm, B. Kirchner: J. Chem. Inf. Model. 2011, 51 (8), pp 2007-2023.
+
+     There is absolutely no warranty on any results obtained from TRAVIS.
+
+  #  Running on gadi-login-02.gadi.nci.org.au at Thu Apr 22 16:09:33 2021 (PID 1210237)
+  #  Running in /scratch/x69/lx3539/JOB/Simone_system/BMIM-PF6/E1/E2/cation/cation-4
+  #  Code version: Jun 04 2018,  Compiled at Sep  6 2019 15:38:39,  Compiler "4.8.5 20150623 (Red Hat 4.8.5-36)", GCC 4.8.5
+  #  Target platform: Linux,  Compile flags: DEBUG_ARRAYS 
+  #  Machine: int=4b, long=8b, addr=8b, 0xA0B0C0D0=D0,C0,B0,A0.
+  #  Home: /home/501/lx3539,  Executable: /scratch/f81/lx3539/JOB/IL-STUDY/travis/exe/travis
+  #  Input from input.txt, Output to terminal
+
+ >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
+
+    Loading configuration from /home/501/lx3539/.travis.conf ...
+
+    Opening position trajectory traj-BMIM-PF6-E2-NVT.lmp ...
+
+    Trajectory contains approximately 6253 time steps (file size 229.17 MiB).
+
+    1376 atoms in the system: 344x C, 258x F, 645x H, 86x N, 43x P
+
+    System extent:  X = { -16255 .. +20260 pm }, dX = 36515 pm
+      (in step 1)   Y = { -19405 .. +21938 pm }, dY = 41343 pm
+                    Z = { -359461 .. +369522 pm }, dZ = 728983 pm
+
+*** Important note:  Trajectory file is in LAMMPS format.
+
+    TRAVIS requires that the atom ordering (sorting) is identical in each time step of the trajectory.
+    However, LAMMPS' defaults may order the atoms randomly in each step when dumping a trajectory.
+    To read a LAMMPS trajectory in TRAVIS, you *need* to make sure the atom ordering stays constant.
+    This can be achieved by specifying "dump modify ... sort id" to your trajectory dump command.
+
+    I have acknowledged this note (y/n). [yes] yes
+
+    The "advanced mode" offers seldomly required features, including support for non-orthorhombic
+    simulation cells, NPT ensemble, non-periodic systems, user-definded virtual atoms, pseudomolecules, ...
+
+    Use the advanced mode until the analysis selection menu (y/n)? [no] no
+
+    Found cell geometry data in trajectory file:
+
+      X = 2511.00 pm,   Y = 2511.00 pm,   Z = 2511.00 pm
+
+    The overall box density is 1.281665 g/cm^3.
+
+    Assuming a 3D-periodic cell.
+
+    Use these values (y) or enter different values (n)? [yes] yes
+    Update cell geometry in every time step (i.e., NPT ensemble) (y) or use fixed cell (n)? [yes] yes
+
+    NPT: Using a cell vector of ( 2511.00 pm | 2511.00 pm | 2511.00 pm ) for molecule recognition.
+
+    Initialized spatial domain engine with 9 x 9 x 9 cells, min. diameter = 255 pm.
+
+    Molecule recognition [###########################################################]
+
+    86 molecules found.
+
+    Sorting atom types...
+    Setting up bond lists...
+    Building atom codes...
+    Creating topological atom order...
+    Creating bond list...
+    Creating angle list...
+    Grouping together equivalent molecules...
+    Found 2 unique molecule types.
+    Sorting molecule types by molecular mass...
+    Found 1 rings.
+    Refining ring systems...
+    Assigning ring systems to molecule types...
+    Sorting rings by size...
+    Molecule recognition finished.
+
+Output of bond matrices:
+
+*** Molecule 1: F6P; Representant 1; Distances in pm ***
+
+    F1  F2  F3  F4  F5  F6  P1 
+F1  ***  -   -   -   -   -  158 
+F2   -  ***  -   -   -   -  158 
+F3   -   -  ***  -   -   -  160 
+F4   -   -   -  ***  -   -  161 
+F5   -   -   -   -  ***  -  159 
+F6   -   -   -   -   -  *** 163 
+P1  158 158 160 161 159 163 *** 
+
+    Atoms F1, F2, F3, F4, F5, F6 are equivalent.
+
+*** Molecule 2: C8H15N2; Representant 1; Distances in pm ***
+    (ring bonds are shown in green)
+
+    C1  C2  C3  C4  C5  C6  C7  C8  H1  H2  H3  H4  H5  H6  H7  H8  H9  H10 H11 H12 H13 H14 H15 N1  N2 
+C1  ***  -  152  -   -   -   -   -   -  109 109  -   -   -   -   -   -   -   -   -   -   -   -  147  -  
+C2   -  ***  -   -   -   -   -   -  108  -   -   -   -   -   -   -   -   -   -   -   -   -   -  136 134 
+C3  152  -  ***  -   -  154  -   -   -   -   -   -   -  109 109  -   -   -   -   -   -   -   -   -   -  
+C4   -   -   -  *** 140  -   -   -   -   -   -  108  -   -   -   -   -   -   -   -   -   -   -  138  -  
+C5   -   -   -  140 ***  -   -   -   -   -   -   -  108  -   -   -   -   -   -   -   -   -   -   -  141 
+C6   -   -  154  -   -  ***  -  154  -   -   -   -   -   -   -  109 109  -   -   -   -   -   -   -   -  
+C7   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -  109 109 109  -   -   -   -  148 
+C8   -   -   -   -   -  154  -  ***  -   -   -   -   -   -   -   -   -   -   -   -  109 109 109  -   -  
+H1   -  108  -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -  
+H2  109  -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -   -   -   -   -  
+H3  109  -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -   -   -   -  
+H4   -   -   -  108  -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -   -   -  
+H5   -   -   -   -  108  -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -   -  
+H6   -   -  109  -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -   -  
+H7   -   -  109  -   -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -   -  
+H8   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -   -  
+H9   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -   -  
+H10  -   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -   -  
+H11  -   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -   -  
+H12  -   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -   -  
+H13  -   -   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -   -   -  ***  -   -   -   -  
+H14  -   -   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -   -   -   -  ***  -   -   -  
+H15  -   -   -   -   -   -   -  109  -   -   -   -   -   -   -   -   -   -   -   -   -   -  ***  -   -  
+N1  147 136  -  138  -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -  ***  -  
+N2   -  134  -   -  141  -  148  -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -  *** 
+
+    5-ring: C5 - C4 - N1 - C2 - N2
+
+    Atoms H2, H3 are equivalent.
+    Atoms H6, H7 are equivalent.
+    Atoms H8, H9 are equivalent.
+    Atoms H10, H11, H12 are equivalent.
+    Atoms H13, H14, H15 are equivalent.
+
+
+*** The following 2 kinds of molecules have been recognized:
+    (ordered by molecular mass)
+
+  - Molecule 1: F6P (43 pieces, 144.96 g/mol)
+      (2 noneq. atoms, 1 noneq. bond, 1 noneq. angle)
+
+  - Molecule 2: C8H15N2 (43 pieces, 139.22 g/mol)
+      (18 noneq. atoms, 18 noneq. bonds, 31 noneq. angles)
+      Detected 1 ring:
+         1.)  5-ring: C5 - C4 - N1 - C2 - N2
+
+
+    If you switch on "USE_OPENBABEL" in config.h, TRAVIS can print SMILES strings of your molecules.
+
+    You can create images of the structural formulas with the atom labels for easier
+    identification of the atoms (requires installed GraphViz package - see www.graphviz.org).
+
+    Create images of the structural formulas (y/n)? [no] no
+
+    Accept these molecules (y) or change something (n)? [yes] yes
+
+    Uniting molecules which have been broken by wrapping...
+
+    The atoms are currently ordered by topological priority.
+
+    Defining virtual atom #1 as molecular Center of Geometry:
+      - F6P...
+      - C8H15N2...
+
+    Defining virtual atom #2 as molecular Center of Mass:
+      - F6P...
+      - C8H15N2...
+
+    Defining ring centers in C8H15N2:
+      - Defining #3 as Center of Ring 1: C5 - C4 - N1 - C2 - N2
+
+    Defining molecular dipole vectors:
+
+      The last virtual atom of each molecule is defined as the tip of the dipole vector
+      starting in center of mass (#2). 1 Debye corresponds to 100pm of vector length.
+      Only useful if dipole/charge data is provided. Otherwise vector has always length of zero.
+
+      - Dipole vector #2 --> #3 in F6P ...
+      - Dipole vector #2 --> #4 in C8H15N2 ...
+
+>>> 7 virtual atoms have been defined: >>>
+
+    #1 in F6P: Center of Geometry.
+    #2 in F6P: Center of Mass.
+
+    #3 in F6P - tip of molecular dipole vector starting in #2.
+
+    #1 in C8H15N2: Center of Geometry.
+    #2 in C8H15N2: Center of Mass.
+
+    #3 in C8H15N2 - defined through center:
+      -  C5    Weight 20.00%
+      -  C4    Weight 20.00%
+      -  C2    Weight 20.00%
+      -  N1    Weight 20.00%
+      -  N2    Weight 20.00%
+
+    #4 in C8H15N2 - tip of molecular dipole vector starting in #2.
+
+<<< End of virtual atoms <<<
+
+
+>>> List of functions <<<
+
+ *** Static (time independent) Functions
+ cdf     - Combined Distribution Function
+ rdf     - Radial Distribution Function
+ adf     - Angular Distribution Function
+ ddf     - Dihedral Distribution Function
+ pldf    - Point-Plane Distance Distribution
+ lidf    - Point-Line Distance Distribution
+ plproj  - Plane Projection Distribution
+ dprof   - Fixed Plane Density Profile
+ fpp     - Fixed Plane Projection
+ dens    - Density Distribution Function
+ sdf     - Spatial Distribution Function
+ psdf    - Pseudo SDF (only 2 ref. atoms)
+ dip     - Dipole Distribution Function
+ cond    - Evaluate Structural Condition
+ sfac    - Compute Structure Factor
+
+ *** Dynamic (time dependent) Functions
+ vdf     - Velocity Distribution Function
+ fdf     - Force Distribution Function
+ msd     - Mean Square Displacement / Diffusion Coefficients
+ acf     - Velocity Autocorrelation Functions
+ rdyn    - Vector Reorientation Dynamics
+ vhcf    - Van Hove Correlation Function
+ aggr    - Aggregation Functions (DACF, DLDF, DDisp)
+
+ *** Spectroscopic Functions
+ spec    - New Spectroscopy Module (IR, Raman, VCD, ROA)
+ power   - Calculate Power Spectrum
+ nc      - Normal Coordinate Analysis
+ ir      - (old) Calculate IR Spectrum
+ raman   - (old) Calculate Raman Spectrum
+ vcd     - (old) Calculate VCD Spectrum
+ drst    - Save Dipole Restart File
+ mrst    - Save Magnetic Moment Restart File
+ pol     - Set up Polarizability Calculation
+
+ *** Miscellaneous Functions
+ env     - Save Trajectory of RM Environment / TDO Plot
+ proc    - Save Processed Trajectory
+ cut     - Cut Clusters
+ reg     - Region-specific Analysis
+ chi     - Chirality Analysis
+ eck     - Transform to Eckart Frame
+ swan    - Sort Wannier Centers
+ voro    - Basic Voronoi Analysis
+ doma    - Domain Analysis
+ vori    - Voronoi Integration Functions
+
+   (You may specify multiple analyses at once, but
+    the safe way is to perform only one kind of analysis at a time.)
+
+    Which functions to compute (comma separated)? cut
+
+ cut    - Cut Clusters
+
+    The advanced mode includes some options which are quite powerful,
+    yet possibly weird or seldomly required.
+
+    Use the advanced mode for the main part (y/n)? [no] no
+
+
+    Which of the molecules should be the reference molecule (F6P=1, C8H15N2=2)? 2
+
+    C8H15N2 is the reference molecule.
+
+>>> Cut clusters >>>
+
+    Show reference molecule itself (y/n)? [yes] yes
+    Center reference molecule in the box (y/n)? [yes] yes
+    Fix rotational freedom of the reference molecule (y/n)? [no] no
+    How many clusters to create? [100] 100
+    How many time steps to use for cluster creation? [6253] 6253
+
+Creating cluster distribution............................Done.
+Sorting cluster distribution............................Done.
+
+Writing cluster selection to "cluster.csv"...Done.
+
+<<< End of Cut clusters <<<
+
+>>> Neighborhood Definition >>>
+
+    Use neighboring F6P molecules (y/n)? [yes] no
+    Use neighboring C8H15N2 molecules (y/n)? [yes] yes
+
+>>> Conditions for neighboring C8H15N2 molecules >>>
+
+Different sets of conditions are connected with OR (at least one of them has to be fulfilled).
+Different conditions within one set are connected with AND (have to be fulfilled at the same time).
+If you create 1 or 2 sets of conditions, a table with subcondition count populations will be printed.
+
+>>> 1. set of conditions >>>
+
+>>> Condition between C8H15N2 and C8H15N2 >>>
+
+    Do you want to define a distance condition (y/n)? [yes] yes
+
+>>> Distance Condition >>>
+
+    Which atom(s) to take from RM C8H15N2 (e.g. "C1,C3-5,H", "*"=all)? [#2] C6
+    Which atom(s) to take from OM C8H15N2 (e.g. "C1,C3-5,H", "*"=all)? [#2] N1
+    Enter another set of atoms for this condition (y/n)? [no] no
+
+    Enter min./max. distance (0) or min./max. nearest neighbor count (1)? [0] 1
+    Use next neighbors from the n-th on? [1] 1
+    Use next neighbors up to the n-th? [1] 100
+Invalid input. Enter an integer number between 1 and 43.
+    Use next neighbors up to the n-th? [1] 43
+
+<<< End of Distance Condition <<<
+
+    Do you want to define an angular condition (y/n)? [no] no
+
+    Using 1 combinations of subconditions for this condition:
+
+       1.) Distance  1 - Angle  1.
+
+<<< End of this condition <<<
+
+    Add another condition to this set of conditions (y/n)? [no] no
+
+<<< End of 1. set of conditions <<<
+
+    Enter an additional set of conditions (y/n)? [no] no
+    Invert this condition (only add bin entries if failed) (y/n)? [no] no
+
+<<< End of Conditions for neighboring C8H15N2 molecules <<<
+
+
+<<< End of Neighborhood Definition <<<
+
+
+>>> Coordinate output options >>>
+
+    Write also virtual atoms (center of mass, ...) (y/n)? [no] no
+    Write detailed (long) comment lines into output xyz file (y/n)? [yes] yes
+    Sort molecules according to distance from reference molecule (y/n)? [yes] yes
+
+<<< End of Coordinate output options <<<
+
+    Put the center of the system to (0|0|0) (y) or to (x/2|y/2|z/2) (n)? [yes] yes
+
+    Wrapping molecules into the box (molecule-wise).
+
+    Not removing center of mass movement of the box.
+
+    In which time step to start processing the trajectory? [1] 1
+    How many time steps to use (from this position on)? [all] 800000
+    Use every n-th time step from the trajectory? [1] 1
+
+    Using 800000 time steps: Every 1st within range 1 - 800000.
+
+########## All information collected ##########
+
+>>> Initialization >>>
+
+
+>>> Saving cluster list as cluster_C8H15N2.xyz
+
+
+<<< End of Initialization <<<
+
+
+### Starting Main Analysis ###
+
+Hint: Press CTRL+C once to softly interrupt analysis and still write the results.
+      Creating an empty file named EXIT ("touch EXIT") has the same effect.
+
+Step      0 ..................................................
+Step     50 ..................................................
+Step   1050 ..................................................
+Step   2050 ..................................................
+Step   3050 ..................................................
+Step   4050 ..................................................
+Step   5050 .................................................
+
+########## Analysis finished ##########
+
+6029 time steps processed.
+
+
+Cluster trajectory was saved as cluster_C8H15N2.xyz.
+
+
+    Note: To show a list of all persons who contributed to TRAVIS,
+          please add "-credits" to your command line arguments, or set the
+          variable "SHOWCREDITS" to "TRUE" in your travis.conf file.
+
+    Source code from other projects used in TRAVIS:
+      - lmfit     from Joachim Wuttke
+      - kiss_fft  from Mark Borgerding
+      - voro++    from Chris Rycroft
+
+    http://www.travis-analyzer.de
+
+    Please cite the following articles:
+
+  * "TRAVIS - A Free Analyzer and Visualizer for Monte Carlo and Molecular Dynamics Trajectories",
+    M. Brehm, B. Kirchner; J. Chem. Inf. Model. 2011, 51 (8), pp 2007-2023.
+
+*** The End ***
+
