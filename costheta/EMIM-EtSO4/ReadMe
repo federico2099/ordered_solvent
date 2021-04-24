@@ -1,0 +1,5 @@
+travis -p traj-EMIM-ESO4-E2-NVT.lmp -i input.txt
+python3 delete.py 
+cp cluster_C8H15N2-deleted.xyz cluster_C8H15N2-deleted.csv
+sed -i -e "s/\  /,/g" cluster_C8H15N2-deleted.csv
+coordinate-EMIM-EtSO4-100snapshot.ipynb
