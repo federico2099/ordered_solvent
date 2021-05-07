@@ -13,4 +13,4 @@
 
 **Step4:** use the jupyter notebook in each folder to calculate the average $cos\theta$ and $\theta$.
 
-### If you have any question and suggestions, please create an issue here or email me `Longkun.Xu@anu.edu.au`
+
