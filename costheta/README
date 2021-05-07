@@ -1,5 +1,0 @@
-travis -p traj-EMIM-ESO4-E2-NVT.lmp -i input.txt ## extact the molecules
-python3 delete.py ## delete atoms we are not using here
-cp cluster_C8H15N2-deleted.xyz cluster_C8H15N2-deleted.csv 
-sed -i -e "s/\  /,/g" cluster_C8H15N2-deleted.csv ## change xyz to csv 
-use the *.ipynb in each folder to calculate the average $cos\theta$ and $\theta$
