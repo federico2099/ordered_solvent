@@ -1,10 +1,10 @@
-## costheta
+# costheta
 
-### This is the tool used to calculate the angles between the dipole moment of each ions and the external electric field. 
+## This is the tool used to calculate the angles between the dipole moment of each ions and the external electric field. 
 
-#### In each folder, input.txt, delete.py and a jupyter notebook is provided.
+### In each folder, input.txt, delete.py and a jupyter notebook is provided.
 
-#### Usage:
+### Usage:
 **Step1:** `travis -p traj-EMIM-ESO4-E2-NVT.lmp -i input.txt` ## This is used to extact the molecules from the MD trajectory.
 
 **Step2:** `python3 delete.py` ## This is used to exact the coordinates of the used atoms.
@@ -13,4 +13,4 @@
 
 **Step4:** use the jupyter notebook in each folder to calculate the average $cos\theta$ and $\theta$.
 
-#### If you have any question, feel free to email me `Longkun.Xu@anu.edu.au`
+### If you have any question and suggestions, feel free to email me `Longkun.Xu@anu.edu.au`
