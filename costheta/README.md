@@ -1,7 +1,5 @@
 # costheta
 
-## This is the tool used to calculate the angles between the dipole moment of each ions and the external electric field. 
-
 ### In each folder, input.txt, delete.py and a jupyter notebook is provided.
 
 ### Usage:
